@@ -34,11 +34,11 @@ if (cluster.isMaster) {
   console.log(`Worker ${process.pid} started`);
 
   const handler = function (req, res) {
-    if (req.url == "/dstat") {
+    if (req.url == "/backend") {
+      res.end(index);
+    } else {
       process.send("increment");
       res.end();
-    } else {
-      res.end(index);
     }
   };
 
