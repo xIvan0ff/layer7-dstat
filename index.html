@@ -54,18 +54,24 @@
                     enabled: true
                 },
                 chart: {
-                    type: 'area'
+                    type: 'area',
+                    defaultSeriesType: "spline",
                 },
                 title: {
                     text: 'Layer7 DSTAT'
                 },
                 xAxis: {
-                    type: 'datetime'
+                    type: "datetime",
+                    tickPixelInterval: 150,
+                    maxZoom: 20 * 1000,
                 },
                 yAxis: {
+                    minPadding: 0.2,
+                    maxPadding: 0.2,
                     title: {
-                        text: ''
-                    }
+                        text: "Requests Per Second",
+                        margin: 80,
+                    },
                 },
                 series: [{
                     name: 'Requests',
