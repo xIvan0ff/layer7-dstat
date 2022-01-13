@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Layer7 - DSTAT</title>
+    <title>LAYER 7 - DSTAT</title>
     <style>
         html,
         body {
@@ -58,7 +58,7 @@
                     defaultSeriesType: "spline",
                 },
                 title: {
-                    text: 'Layer7 DSTAT'
+                    text: 'LAYER 7 DSTAT'
                 },
                 xAxis: {
                     type: "datetime",
@@ -79,7 +79,7 @@
                 }]
             });
 
-            info.innerText = "Capturing requests from " + location.host + "/dstat";
+            info.innerText = "Capturing requests from " + location.host + "";
 
             let ws = new WebSocket("ws://" + location.host + "/");
 
